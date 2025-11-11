@@ -39,22 +39,26 @@ gem install enigma
 ## Usage
 
 # In a Rails app, configure once (e.g., in an initializer)
+```
 Enigma.configure do |config|
   config.base64_signer_key = Rails.application.credentials.dig(:firebase, :base64_signer_key)
   config.base64_salt_separator = Rails.application.credentials.dig(:firebase, :base64_salt_separator)
   config.logger = Rails.logger  # Optional: use Rails logger
 end
+```
 
 Then verify
+```
 verifier = Enigma::Verifier.new(
   password_to_check: "user_password",
   user_salt_base64: "some_base64_salt",
   stored_hash_base64: "stored_base64_hash"
 )
 verifier.verify  # => true or false
+```
 
 # Assuming you have Firebase user data
-
+```
 firebase_user = { salt_base64: '...', hash_base64: '...', password_input: user_provided_password }
 
 Enigma.configure do |config|
@@ -77,7 +81,7 @@ if verifier.verify
 else
   puts "Password verification failed. Prompt for reset."
 end
-
+```
 
 
 ## Development
