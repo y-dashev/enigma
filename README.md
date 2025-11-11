@@ -27,13 +27,13 @@ In a real-world migration script, this might look like:
 Install the gem and add to the application's Gemfile by executing:
 
 ```bash
-bundle add enigma
+bundle add enigma-rb
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
 ```bash
-gem install enigma
+gem install enigma-rb
 ```
 
 ## Usage
