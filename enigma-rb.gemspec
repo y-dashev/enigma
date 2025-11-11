@@ -3,7 +3,7 @@
 require_relative "lib/enigma/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "enigma"
+  spec.name = "enigma-rb"
   spec.version = Enigma::VERSION
   spec.authors = ["Yavor Dashev"]
   spec.email = ["58559918+y-dashev@users.noreply.github.com"]
